@@ -1,1 +1,14 @@
-<p>login works!</p>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <h2 style="text-align: center;">LOGIN FORM</h2>
+    <div class="form-group">
+        <label for="name">name</label>
+        <input  id="name" type="text" formControlName="username">
+    </div>
+
+    <div class="from-group">
+        <label for="name">password</label>
+        <input id="password" type="text" formControlName="password" maxlength="8">
+    </div>
+    <button>submit</button>
+</form>
+<h1>{{result}}</h1>
